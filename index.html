@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Max的国服马超</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        video {
+            width: 1600%;
+            max-width: 1000px;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="">Logo</a>
+    <ul>
+      <li><a href="#" class="active">傻鸟</a></li>
+      <li><a href="#">傻鸟</a></li>
+      <li><a href="#">菜鸡</a></li>
+      <li><a href="#">菜鸡</a></li>
+    </ul>
+  </header>
+  <section>
+    <img src="images/stars.png" id="stars">
+    <img src="images/moon.png" id="moon">
+    <img src="images/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">欣赏傻子</h2>
+    <a href="#sec" id="btn">牛马Max</a>
+    <img src="images/mountains_front.png" id="mountains_front">
+  </section>
+  <div class="sec" id="sec">
+
+    
+    <h2>Max的马超水平真的超级高</h2>
+    <p>国服马车</p>
+
+
+    
+    <video controls>
+        <source src="max.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+  </div>
+ 
+  <script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_front = document.getElementById('mountains_front')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px'
+      moon.style.top = value * 1.05 + 'px'
+      mountains_behind.style.top = value * 0.5 + 'px'
+      mountains_front.style.top = value * 0 + 'px'
+      text.style.marginRight = value * 4 + 'px'
+      text.style.marginTop = value * 1.5 + 'px'
+      btn.style.marginTop = value * 1.5 + 'px'
+      header.style.top = value * 0.5 + 'px'
+    })
+  </script>
+</body>
+</html>
